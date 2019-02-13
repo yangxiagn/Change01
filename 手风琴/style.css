@@ -1,0 +1,38 @@
+*{margin: 0; padding: 0;}
+
+.xy-gallery > div{ 
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transition: all 0.3s;
+}
+.xy-gallery > div img{ 
+	position: absolute; 
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%)}
+
+.xy-gallery > div .text{ 
+	/*让动画延迟0.3s*/
+  transition:all 1s 0.3s;
+  /*把文本隐藏*/  
+  opacity: 0;
+  /*距离底部的距离为0*/
+  bottom: 0;
+  /*图片从下往上移动*/
+  transform: translateY(100%); 
+  position: absolute;
+  /*给图片给上宽度，字就不会轻易移动*/
+  width: 340px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.xy-gallery > div.active .text{ 
+	/*把选择的图片的文本显示出来*/
+	opacity: 1;
+	transform: translateY(0%);}
+
